@@ -1,0 +1,19 @@
+.contaner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: black;
+  padding: 10px 20px;
+  color: white;
+  width: 100%;
+
+  position: fixed;
+}
+.sec-contaner ul {
+  display: flex;
+
+  gap: 20px;
+  list-style: none;
+  margin-right: 40px;
+}

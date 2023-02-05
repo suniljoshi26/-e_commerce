@@ -1,19 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,400;1,500&display=swap");
 .contaner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 
-  background: black;
+  background: rgb(234, 57, 57);
   padding: 10px 20px;
   color: white;
   width: 100%;
 
   position: fixed;
 }
+.logo {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 1;
+  font-style: normal;
+}
 .sec-contaner ul {
   display: flex;
 
   gap: 20px;
   list-style: none;
-  margin-right: 40px;
+  margin-right: 80px;
+}
+.sec-contaner ul li {
+  font-size: medium;
 }

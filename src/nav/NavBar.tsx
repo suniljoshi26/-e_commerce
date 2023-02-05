@@ -4,7 +4,10 @@ const NavBar = () => {
   return (
     <div className="contaner">
       <div>
-        <p>WINKL</p>
+        <p className=" logo">WINKL</p>
+      </div>
+      <div className="Input">
+        <input />
       </div>
       <div className="sec-contaner">
         <ul>

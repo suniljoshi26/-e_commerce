@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
+import Button from "./Button";
 import Navbar from "./Navbar";
 import TodoForm from "./TodoForm";
 import TodoRow from "./TodoRow";
 const TodoPage = () => {
+  const [form, setForm] = useState(true);
+  const formVisable = () => {
+    setForm(!form);
+  };
   return (
     <div>
       <Navbar />
-      <div>
+      <div className="sm:ml-40 ml-10">
         <TodoRow />
-        <TodoForm />
+        {form && (
+          <Button onClick={formVisable} them="highlight">
+            +Add Todo
+          </Button>
+        )}
+
+        {!form && <TodoForm formVisable={formVisable} />}
         <TodoRow />
       </div>
     </div>

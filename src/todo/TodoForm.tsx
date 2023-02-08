@@ -1,5 +1,7 @@
 import React, { ChangeEvent, FC, useState } from "react";
 import { TiDeleteOutline } from "react-icons/ti";
+import { useDispatch } from "react-redux";
+import { addTodoAction } from "./Action";
 import Button from "./Button";
 type TodoFormProps = {
   formVisable: () => void;
@@ -10,6 +12,11 @@ const TodoForm: FC<TodoFormProps> = ({ formVisable }) => {
     setInput(event.target.value);
   };
   console.log("todo", input);
+  const despatch = useDispatch();
+  const handleForm = () => {
+    despatch(addTodoAction(input));
+    formVisable();
+  };
 
   return (
     <div className="border border-gray-200 rounded-md shadow-md p-4  mt-4">
@@ -23,7 +30,7 @@ const TodoForm: FC<TodoFormProps> = ({ formVisable }) => {
         />
       </div>
       <div className="space-x-6 mt-4 ">
-        <Button onClick={formVisable}>Save</Button>
+        <Button onClick={handleForm}>Save</Button>
         <Button them="secondary">Cancel</Button>
       </div>
     </div>

@@ -7,7 +7,7 @@ const TodoRow = () => {
       <div className="flex justify-between space-x-2 items-center p-1 border mt-2 rounded-md shadow-md w-72">
         <div className=" flex flex-row items-center space-x-2">
           <input
-            className="w-5 h-5   accent-yellow-400"
+            className="w-5 h-5  accent-yellow-400"
             checked
             type="checkbox"
           />
@@ -15,7 +15,6 @@ const TodoRow = () => {
         </div>
         <TiDeleteOutline className="text-2xl  cursor-pointer" />
       </div>
-      s
     </div>
   );
 };

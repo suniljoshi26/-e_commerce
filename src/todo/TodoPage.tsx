@@ -16,6 +16,7 @@ const TodoPage = () => {
     <div>
       <Navbar />
       <div className="sm:ml-40 ml-10">
+        <h1 className="mt-20 text-2xl">Things to do</h1>
         {todo.map((t) => (
           <TodoRow todo={t} key={t.id} />
         ))}
